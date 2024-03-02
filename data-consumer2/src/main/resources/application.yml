@@ -1,0 +1,13 @@
+server:
+  port: 8083
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      group-id: 2
+
+#topics: ${KAFKA_SUBSCRIBED_TOPICS}
+
+
